@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Designs</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <script src="Style/script.js"></script>
+</head>
+<body>
+
+    <div class="navbar-top">
+        <div class="input-box2">
+            <img src="images/search-logo2.png" alt="" width="20" height="20">
+            <input type="text" placeholder="Search" id="search-input"/>
+            <div id="autocomplete-results"></div>
+              
+
+            <script>
+              document.getElementById("search-input").addEventListener("input", function() {
+    var query = this.value.toLowerCase();
+    var resultsContainer = document.getElementById("autocomplete-results");
+
+    
+    resultsContainer.innerHTML = "";
+
+
+    var pageSuggestions = [
+        { name: "Necklaces", link: "necklaces.html" },
+        { name: "Bracelets", link: "bracelets.html" },
+        { name: "Rings", link: "rings.html" },
+        { name: "Earrings", link: "earrings.html" },
+        { name: "About TJ Designs", link: "about.html" },
+        { name: "Contact TJ Designs", link: "contact.html" },
+        { name: "FAQ", link: "faq.html" }
+    ];
+
+    if (query === "") {
+        resultsContainer.style.display = "none";
+        return; 
+    }
+
+
+    pageSuggestions.forEach(function(suggestion) {
+        if (suggestion.name.toLowerCase().includes(query)) {
+            var resultItem = document.createElement("div");
+            resultItem.textContent = suggestion.name;
+            resultItem.onclick = function() {
+                window.location.href = suggestion.link;
+            };
+            resultsContainer.appendChild(resultItem);
+        }
+    });
+
+
+    resultsContainer.style.display = resultsContainer.children.length > 0 ? "block" : "none";
+});
+
+document.addEventListener("click", function(event) {
+    var resultsContainer = document.getElementById("autocomplete-results");
+    var searchInput = document.getElementById("search-input");
+
+ 
+    if (!searchInput.contains(event.target) && !resultsContainer.contains(event.target)) {
+        resultsContainer.style.display = "none";
+    }
+});
+
+function search() {
+    var query = document.getElementById("search-input").value;
+    console.log("Performing search for: " + query);
+}
+            </script>
+            
+        </div>    
+        <div class="icons">
+            <a href="login.html"><img src="images/finaluserphotowhite.png" alt="" width="55" height="55"></a>
+            <a href="cart.html"><img src="images/SC-white.png" alt="" width="47" height="55"></a>
+            </div>
+          </div>
+         
+    </div>
+    <header class="header">
+        <a href="index.html" class="logo">TJ Designs</a>
+
+        <nav class="navbar">
+            <a href="necklaces.html">Necklaces</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="rings.html">Rings</a>
+            <a href="Earrings.html">Earrings</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="FAQ.html">FAQ</a>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="wrapper7">
+    <h2>Registration</h2>
+    <form method="post">
+      <div class="data-box">
+        <input type="text" placeholder="Name" required>
+      </div>
+      <div class="data-box">
+        <input type="text" placeholder="Email" required>
+      </div>
+      <div class="data-box">
+        <input type="password" placeholder="Create password" required>
+      </div>
+      <div class="data-box">
+        <input type="password" placeholder="Confirm password" required>
+      </div>
+      <div class="data-box button">
+        <input type="Submit" value="Register Now">
+      </div>
+      <br>
+      <div class="text7">
+        <h3>Already have an account? <a href="login.html">Login now</a></h3>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="#Services">Services</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="#Afterpay">Afterpay</a>
+        <a href="#VIPdiscounts">VIP Discounts</a>
+
+        <br>
+        
+
+        <div class="payments">
+            <a href=""><img src="Images/Logopayments2.png" alt="" width="250" height="30"></a> 
+        </div>
+
+
+    </div>
+    <div class="col-2">
+        <h3>SIGN UP FOR VIP DISCOUNTS</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address">
+            <br>
+            <button type="submit">SUBSCRIBE NOW</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p> <center>&copy; 2023 TJ DESIGNS. All rights reserved.</center></p>
+       
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>SOCIALS</h3>
+        <a href="TikTok">TikTok</a>
+        <a href="Instagram">Instagram</a>
+        <a href="Snapchat">Snapchat</a>
+        <a href="X (Twitter)">X (Twitter)</a>
+    </div>
+  </div>
+
+</body>
+</html>
