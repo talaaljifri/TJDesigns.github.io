@@ -1353,3 +1353,21 @@ form button {
 .closebtn:hover {
   color: black;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px; 
+  }
+  .navbar a {
+    margin-left: 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 5px 10px;
+  }
+  .navbar a {
+    margin-left: 10px;
+  }
+}
