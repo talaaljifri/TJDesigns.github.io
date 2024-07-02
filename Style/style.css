@@ -1276,6 +1276,53 @@ form button {
   }
 }
 
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: goldenrod;
+  }
+  
+  .col-1, .col-2, .col-3 {
+    flex-basis: 30%;
+    margin: 20px;
+  }
+  
+  .payments {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .payments img {
+    width: 250px;
+    height: 30px;
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 479px) {
+    .footer {
+      flex-direction: column;
+    }
+    .col-1, .col-2, .col-3 {
+      flex-basis: 100%;
+      margin: 10px;
+    }
+    .payments {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .copyright {
+      margin: 10px 0;
+    }
+  }
 
 
 
